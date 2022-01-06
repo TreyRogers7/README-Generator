@@ -36,7 +36,7 @@ const questionGenerator = [
         name: 'license',
         type: 'checkbox',
         message: 'Select the license you would like to use for this project.',
-        choices: ['MIT','BSD 3','APACHE 2.0', 'GPL 3.0', 'none'],
+        choices: ['APACHE 2.0','BSD 3','BOOST','ECLIPSE','none']
     },
     {
         name: 'user',
@@ -47,5 +47,46 @@ const questionGenerator = [
         name: 'email',
         type: 'input',
         message: 'Enter your email address',
-    }
-]
+    },
+],
+
+init = function() {
+    inquirer
+    .prompt(question)
+    .then((answer) =>{
+        fs.writeFile('README.md', readMe(answer), (err)=>
+        err ? console.log(err) : console.log('Complete!'))
+    })
+}
+
+const readMe = data =>{
+    return(`# ${data.name}
+    
+    ###DESCRIPTION
+
+        ${data.description}
+    
+    ###INSTALLATION
+
+        ${data.install}
+    
+    ###USAGE
+
+        ${data.usage}
+    
+    ###CONTRIBUTING
+
+        ${data.}
+    
+    ###TESTS
+
+        ${data.}
+    
+    ###INFO
+        GitHub: https://www.github.com/${data.user}
+    
+        Email Address: ${data.email}
+    `)
+}
+
+init();
