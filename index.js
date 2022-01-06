@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const questionGenerator = [
+const question = [
     {
         name: 'name',
         type: 'input',
@@ -36,7 +36,7 @@ const questionGenerator = [
         name: 'license',
         type: 'checkbox',
         message: 'Select the license you would like to use for this project.',
-        choices: ['APACHE 2.0','BSD 3','BOOST','ECLIPSE','none']
+        choices: '',
     },
     {
         name: 'user',
@@ -76,11 +76,11 @@ const readMe = data =>{
     
     ###CONTRIBUTING
 
-        ${data.}
+        ${data.contributors}
     
     ###TESTS
 
-        ${data.}
+        ${data.testing}
     
     ###INFO
         GitHub: https://www.github.com/${data.user}
