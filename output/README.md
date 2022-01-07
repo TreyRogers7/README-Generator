@@ -18,9 +18,9 @@ Richard Rogers
     
 ### LICENSE
 
-APACHE2.0
+GNU
 
-![License](https://img.shields.io/badge/License-APACHE2.0-blue.svg)
+![License](https://img.shields.io/badge/License-GNU-blue.svg)
     
 ### TESTS
 

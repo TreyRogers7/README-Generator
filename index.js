@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const readMe = require('./utils')
-const license = require('./library')
+
 const question = [
     {
         name: 'name',
