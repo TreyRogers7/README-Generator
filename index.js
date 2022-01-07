@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const readMe = require('./utils')
 
 const question = [
     {
@@ -34,9 +35,9 @@ const question = [
     },
     {
         name: 'license',
-        type: 'checkbox',
+        type: 'list',
         message: 'Select the license you would like to use for this project.',
-        choices: '',
+        choices: ['MIT', 'GNU', 'APACHE2.0'],
     },
     {
         name: 'user',
@@ -54,39 +55,9 @@ init = function() {
     inquirer
     .prompt(question)
     .then((answer) =>{
-        fs.writeFile('README.md', readMe(answer), (err)=>
+        fs.writeFile('./output/README.md', readMe(answer), (err)=>
         err ? console.log(err) : console.log('Complete!'))
     })
-}
-
-const readMe = data =>{
-    return(`# ${data.name}
-    
-    ###DESCRIPTION
-
-        ${data.description}
-    
-    ###INSTALLATION
-
-        ${data.install}
-    
-    ###USAGE
-
-        ${data.usage}
-    
-    ###CONTRIBUTING
-
-        ${data.contributors}
-    
-    ###TESTS
-
-        ${data.testing}
-    
-    ###INFO
-        GitHub: https://www.github.com/${data.user}
-    
-        Email Address: ${data.email}
-    `)
 }
 
 init();
