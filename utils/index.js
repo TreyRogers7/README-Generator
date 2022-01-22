@@ -4,6 +4,14 @@ const readMe = data =>{
 ### DESCRIPTION
 
 ${data.description}
+
+### TABLE OF CONTENTS
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Info](#info)
     
 ### INSTALLATION
 
@@ -16,16 +24,7 @@ ${data.usage}
 ### CONTRIBUTING
 
 ${data.contributors}
-    
-### LICENSE
 
-${data.license}
-
-![License](https://img.shields.io/badge/License-${data.license}-blue.svg)
-    
-### TESTS
-
-${data.testing}
     
 ### INFO
 GitHub: https://www.github.com/${data.user}

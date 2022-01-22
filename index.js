@@ -28,17 +28,17 @@ const question = [
         type: 'input',
         message: 'Who are your contributors?',
     },
-    {
-        name: 'testing',
-        type: 'input',
-        message: 'Please enter tests here',
-    },
-    {
-        name: 'license',
-        type: 'list',
-        message: 'Select the license you would like to use for this project.',
-        choices: ['MIT', 'GNU', 'APACHE2.0'],
-    },
+    // {
+    //     name: 'testing',
+    //     type: 'input',
+    //     message: 'Please enter tests here',
+    // },
+    // {
+    //     name: 'license',
+    //     type: 'list',
+    //     message: 'Select the license you would like to use for this project.',
+    //     choices: ['MIT', 'GNU', 'APACHE2.0'],
+    // },
     {
         name: 'user',
         type: 'input',
